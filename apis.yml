@@ -103,9 +103,6 @@ common:
     type: GitHub
 created: 2024/03/13
 modified: '2024-11-15'
-overlays:
-  - url: overlays/apis-io-search.yml
-    type: APIs.io Search
 description: >-
   Incorporate the full range of Goldman Sachs services within your own
   applications and processes to drive efficiency, architect for scale, and
