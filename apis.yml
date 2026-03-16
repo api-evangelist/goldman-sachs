@@ -1,12 +1,26 @@
 aid: goldman-sachs
+name: Goldman Sachs
+description: >-
+  Incorporate the full range of Goldman Sachs services within your own
+  applications and processes to drive efficiency, architect for scale, and
+  create new business lines by leveraging our scale and market coverage.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Banking
+  - Financial
 url: >-
-  https://raw.githubusercontent.com/apis-json/artisanal/main/apis/factset/apis.yml
+  https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/apis.yml
+created: '2024-03-13'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 apis:
   - aid: goldman-sachs:goldman-sachs-content-services-api
     name: Goldman Sachs Content Services API
     tags: []
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    baseURL: https://example.com
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
       - url: https://developer.gs.com/docs/#Products%20and%20Platforms
@@ -19,7 +33,6 @@ apis:
     name: Goldman Sachs Pricing & Risk Services API
     tags: []
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    baseURL: https://example.com
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
       - url: https://developer.gs.com/docs/#Products%20and%20Platforms
@@ -31,7 +44,6 @@ apis:
     name: Goldman Sachs Hedging Services API
     tags: []
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    baseURL: https://example.com
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
       - url: https://developer.gs.com/docs/#Products%20and%20Platforms
@@ -44,7 +56,6 @@ apis:
     name: Goldman Sachs Index Services API
     tags: []
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    baseURL: https://example.com
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
       - url: https://developer.gs.com/docs/#Products%20and%20Platforms
@@ -58,7 +69,6 @@ apis:
     name: Goldman Sachs Portfolio Services API
     tags: []
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    baseURL: https://example.com
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
       - url: https://developer.gs.com/docs/#Products%20and%20Platforms
@@ -72,7 +82,6 @@ apis:
     name: Goldman Sachs Data Services API
     tags: []
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    baseURL: https://example.com
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
       - url: https://developer.gs.com/docs/#Products%20and%20Platforms
@@ -83,28 +92,13 @@ apis:
       market professionals, as well as a variety of unique Goldman Sachs content
       for use in quantitative and data-driven strategies and analytics,
       including a Security Master with deep history.
-name: Goldman Sachs
-tags:
-  - Banking
-  - Financial
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 common:
   - url: https://developer.gs.com/
     type: Portal
   - url: https://developer.gs.com/blog/posts
     type: Blog
   - url: https://github.com/goldmansachs/
-    type: GitHub
-created: 2024/03/13
-modified: '2024-11-15'
-description: >-
-  Incorporate the full range of Goldman Sachs services within your own
-  applications and processes to drive efficiency, architect for scale, and
-  create new business lines by leveraging our scale and market coverage.
+    type: GitHub Organization
 maintainers:
-  - FN: API Evangelist
-    email: info@apievangelist.com
-specificationVersion: '0.17'
-type: Index
-position: Consumer
-access: 3rd-Party
+  - FN: Kin Lane
+    email: kin@apievangelist.com
