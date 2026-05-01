@@ -14,12 +14,15 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/apis.yml
 created: '2024-03-13'
-modified: '2026-03-16'
+modified: '2026-04-28'
 specificationVersion: '0.19'
 apis:
   - aid: goldman-sachs:goldman-sachs-content-services-api
     name: Goldman Sachs Content Services API
-    tags: []
+    tags:
+      - Content
+      - Insights
+      - Research
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
@@ -31,7 +34,10 @@ apis:
       both historical and real-time fundamental insights and analysis.
   - aid: goldman-sachs:goldman-sachs-pricing-risk-services-api
     name: Goldman Sachs Pricing & Risk Services API
-    tags: []
+    tags:
+      - Pricing
+      - Risk
+      - Analytics
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
@@ -42,7 +48,10 @@ apis:
       deeper understanding of your portfolio exposures and risks.
   - aid: goldman-sachs:goldman-sachs-hedging-services-api
     name: Goldman Sachs Hedging Services API
-    tags: []
+    tags:
+      - Hedging
+      - Optimization
+      - Risk
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
@@ -54,7 +63,10 @@ apis:
       controlling for cost and tradability to meet your investment goals.
   - aid: goldman-sachs:goldman-sachs-index-services-api
     name: Goldman Sachs Index Services API
-    tags: []
+    tags:
+      - Indices
+      - Baskets
+      - Investment
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
@@ -67,7 +79,10 @@ apis:
       express thematic and risk views.
   - aid: goldman-sachs:goldman-sachs-portfolio-services-api
     name: Goldman Sachs Portfolio Services API
-    tags: []
+    tags:
+      - Portfolio
+      - Reporting
+      - Workflow
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
@@ -80,7 +95,10 @@ apis:
       the alpha driving decisions.
   - aid: goldman-sachs:goldman-sachs-data-services-api
     name: Goldman Sachs Data Services API
-    tags: []
+    tags:
+      - Data
+      - Market Data
+      - Research
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
     properties:
@@ -92,9 +110,28 @@ apis:
       market professionals, as well as a variety of unique Goldman Sachs content
       for use in quantitative and data-driven strategies and analytics,
       including a Security Master with deep history.
+  - aid: goldman-sachs:goldman-sachs-transaction-banking-api
+    name: Goldman Sachs Transaction Banking API
+    tags:
+      - Banking
+      - Payments
+      - Transaction Banking
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.gs.com/docs/services/transaction-banking/
+    properties:
+      - url: https://developer.gs.com/docs/services/transaction-banking/
+        type: Documentation
+    description: >-
+      Goldman Sachs Transaction Banking provides programmatic access to virtual
+      and physical accounts, ACH, wire, and book transfers, and balance and
+      transaction reporting for treasury and embedded banking workflows.
 common:
   - url: https://developer.gs.com/
     type: Portal
+  - url: https://developer.gs.com/docs/
+    type: Documentation
+  - url: https://marquee.gs.com/
+    type: Website
   - url: https://developer.gs.com/blog/posts
     type: Blog
   - url: https://github.com/goldmansachs/
