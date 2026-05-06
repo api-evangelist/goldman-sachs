@@ -1,177 +1,84 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Goldman Sachs
+providerId: goldman-sachs
+created: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - FinOps
+  - FOCUS
+  - Banking
+  - Capital Markets
+description: 'FOCUS-aligned FinOps framing for Goldman Sachs institutional API products: Marquee data
+  & analytics subscriptions and Transaction Banking transaction fees. Specific rates are bilateral and
+  not publicly posted.'
+notes: Reconcile once published rate cards exist.
+sources:
+  - https://www.goldmansachs.com/
+  - https://developer.gs.com/
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
   dataSpec: FOCUS
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
-provider: Goldman Sachs
-providerId: goldman-sachs
-publisherName: Goldman Sachs
-serviceCategory: API
-created: '2026-05-04'
-modified: '2026-05-04'
-tags:
-  - Banking
-  - Financial
-  - FinOps
-  - Cost Management
-  - FOCUS
-description: FinOps framework definition for the Goldman Sachs API surface. Provides a FOCUS-aligned mapping
-  for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+publisherName: The Goldman Sachs Group, Inc.
+serviceCategory: Banking / Capital Markets
 billingModel:
-  pricingCategory: Usage-Based
+  pricingCategory: Subscription + Transaction Fees
   billingFrequency: Monthly
-  billingCurrency: USD
+  billingCurrency: USD (settlement varies)
   chargeCategories:
-    - Usage
     - Purchase
-    - Tax
-    - Credit
+    - Usage
     - Adjustment
-  chargeFrequency: Recurring
 focusColumns:
   ServiceName: Goldman Sachs
-  ServiceCategory: Developer Tools / API
+  ServiceCategory: Banking
   ProviderName: Goldman Sachs
-  PublisherName: Goldman Sachs
-  InvoiceIssuerName: Goldman Sachs
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: The Goldman Sachs Group, Inc.
+  InvoiceIssuerName: Goldman Sachs Bank USA
   BillingCurrency: USD
-  ChargeCategory: Usage
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: marquee_subscription
+    description: Marquee data / analytics subscription
+    unit: month
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
+      - product
+      - data_set
+  - name: txb_payments
+    description: Payment instructions executed via Transaction Banking
+    unit: transaction
     aggregation: sum
     dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
+      - rail
+      - currency
+  - name: txb_fx_volume
+    description: FX execution volume
+    unit: USD
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: Goldman Sachs Content Services API
-    baseURL: ''
-    tags:
-      - Content
-      - Insights
-      - Research
-    serviceName: Goldman Sachs Content Services API
-    serviceCategory: API
-  - name: Goldman Sachs Pricing & Risk Services API
-    baseURL: ''
-    tags:
-      - Pricing
-      - Risk
-      - Analytics
-    serviceName: Goldman Sachs Pricing & Risk Services API
-    serviceCategory: API
-  - name: Goldman Sachs Hedging Services API
-    baseURL: ''
-    tags:
-      - Hedging
-      - Optimization
-      - Risk
-    serviceName: Goldman Sachs Hedging Services API
-    serviceCategory: API
-  - name: Goldman Sachs Index Services API
-    baseURL: ''
-    tags:
-      - Indices
-      - Baskets
-      - Investment
-    serviceName: Goldman Sachs Index Services API
-    serviceCategory: API
-  - name: Goldman Sachs Portfolio Services API
-    baseURL: ''
-    tags:
-      - Portfolio
-      - Reporting
-      - Workflow
-    serviceName: Goldman Sachs Portfolio Services API
-    serviceCategory: API
-  - name: Goldman Sachs Data Services API
-    baseURL: ''
-    tags:
-      - Data
-      - Market Data
-      - Research
-    serviceName: Goldman Sachs Data Services API
-    serviceCategory: API
-  - name: Goldman Sachs Transaction Banking API
-    baseURL: ''
-    tags:
-      - Banking
-      - Payments
-      - Transaction Banking
-    serviceName: Goldman Sachs Transaction Banking API
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+      - currency_pair
+  - name: account_maintenance
+    description: Corporate / virtual account maintenance fees
+    unit: account-month
+    aggregation: sum
+principles:
+  - name: Visibility
+    description: Reconcile Goldman Sachs invoices and Marquee usage exports against ledger; surface TxB
+      payment volumes via the TxB reporting API.
+  - name: Allocation
+    description: Allocate Marquee subscription cost to the consuming desk; TxB payment fees to the originating
+      product.
+  - name: Optimization
+    description: Right-size Marquee data-set entitlements; route low-value payments to cheaper rails;
+      consolidate accounts to qualify for relationship pricing.
+  - name: Accountability
+    description: Front-office desks own Marquee spend; corporate treasury owns TxB spend; finance reviews
+      monthly statements.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
