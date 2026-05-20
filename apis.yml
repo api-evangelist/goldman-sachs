@@ -126,6 +126,8 @@ apis:
       and physical accounts, ACH, wire, and book transfers, and balance and
       transaction reporting for treasury and embedded banking workflows.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/goldman-sachs
   - url: https://developer.gs.com/
     type: Portal
   - url: https://developer.gs.com/docs/
