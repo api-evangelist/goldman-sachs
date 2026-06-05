@@ -11,6 +11,7 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 tags:
   - Banking
   - Financial
+  - Fortune 100
 url: >-
   https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/apis.yml
 created: '2024-03-13'
