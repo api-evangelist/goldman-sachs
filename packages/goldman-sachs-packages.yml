@@ -1,0 +1,27 @@
+generated: '2026-07-23'
+method: searched
+source: https://pypi.org/project/gs-quant/ + https://github.com/goldmansachs/gs-quant
+notes: >-
+  Goldman Sachs publishes one first-party, self-serve-installable client library:
+  the open-source GS Quant Python toolkit (Apache-2.0), which wraps the Marquee
+  pricing, risk and data APIs behind a Python client. The institution-gated TxB
+  and RIA Custody surfaces are HTML-documented with no published client SDKs.
+packages:
+  - language: python
+    registry: pypi
+    name: gs-quant
+    version: 2.1.1
+    url: https://pypi.org/project/gs-quant/
+    source: https://github.com/goldmansachs/gs-quant
+    install: pip install gs-quant
+    license: Apache-2.0
+    official: true
+    covers:
+      - Goldman Sachs Pricing & Risk Services API
+      - Goldman Sachs Data Services API
+      - Goldman Sachs Hedging Services API
+      - Goldman Sachs Index Services API
+      - Goldman Sachs Portfolio Services API
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

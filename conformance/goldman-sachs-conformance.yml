@@ -1,0 +1,49 @@
+generated: '2026-07-23'
+method: derived
+source: >-
+  authentication/goldman-sachs-authentication.yml,
+  conventions/goldman-sachs-conventions.yml,
+  asyncapi/goldman-sachs-txb-webhooks.yml
+notes: >-
+  Cross-cutting standards posture derived from the captured auth, conventions and
+  webhook artifacts (Goldman Sachs publishes no machine-readable spec, so these
+  are asserted from documented behavior, not parsed from an OpenAPI). No
+  published developer-facing certification/compliance program (SOC 2 / ISO 27001
+  trust center) was found on developer.gs.com, so no Compliance pointer is emitted.
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: Marquee and RIA Custody authenticate with OAuth 2.0 client credentials.
+  - id: oauth2-client-credentials
+    conforms: true
+    evidence: client_id/client_secret application-credential flow documented for Marquee and GSCS.
+  - id: mutual-tls
+    conforms: true
+    evidence: Transaction Banking requires client-certificate mTLS plus IP allowlisting.
+  - id: jwt-rfc7519
+    conforms: true
+    evidence: TxB requests carry an RSA-signed JWT (kid, subject, issuer, audience, cert hash) with per-call step-up.
+  - id: idempotency
+    conforms: true
+    evidence: TxB payment-origination endpoints support client-supplied idempotency keys for safe retry.
+  - id: webhooks
+    conforms: true
+    evidence: TxB documents push webhooks for payment-status and incoming-payment notifications.
+  - id: openid-connect
+    conforms: false
+    evidence: OAuth 2.0 documented; no OIDC discovery surface published.
+  - id: fapi
+    conforms: false
+    evidence: No FAPI profile claim published on the public developer surface.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: JSON errors with standard HTTP codes; no application/problem+json contract documented.
+  - id: psd2-berlin-group
+    conforms: partial
+    evidence: >-
+      The US/institutional surface profiled here is not PSD2; Goldman Sachs Bank
+      Europe operates a separate PSD2/XS2A open-banking portal at
+      developer.xs2a.goldman.com (not part of this repo's API set).
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

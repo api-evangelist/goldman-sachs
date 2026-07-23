@@ -1,0 +1,71 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  https://developer.gs.com/docs/gsquant/authentication/gs-session/,
+  https://developer.gs.com/docs/services/transaction-banking/auth-connection/,
+  https://developer.gs.com/docs/services/transaction-banking/auth-connection-part2,
+  https://developer.gs.com/docs/services/ria-custody/authentication/
+notes: >-
+  Goldman Sachs' three public developer surfaces use three distinct auth models.
+  Derived from the published authentication docs (the specs themselves are gated;
+  developer.gs.com blocks automated fetch, so schemes are captured from the docs
+  and search results rather than an OpenAPI securitySchemes block).
+summary:
+  types: [oauth2, http, mutualTLS]
+  oauth2_flows: [clientCredentials]
+  surfaces: 3
+schemes:
+  - name: MarqueeOAuth2
+    type: oauth2
+    flow: clientCredentials
+    description: >-
+      Marquee platform APIs (Content, Pricing & Risk, Hedging, Index, Portfolio,
+      Data Services, and the GS Quant toolkit) authenticate a session with OAuth
+      2.0 application credentials (client_id / client_secret) issued to approved
+      institutional clients, exchanged for a bearer token against the Marquee
+      auth endpoint. GS Quant's GsSession wraps this flow (client_credentials or
+      a Marquee cookie session).
+    applies_to:
+      - Goldman Sachs Content Services API
+      - Goldman Sachs Pricing & Risk Services API
+      - Goldman Sachs Hedging Services API
+      - Goldman Sachs Index Services API
+      - Goldman Sachs Portfolio Services API
+      - Goldman Sachs Data Services API
+      - GS Quant Python Toolkit
+    docs: https://developer.gs.com/docs/gsquant/authentication/gs-session/
+  - name: TxBmTLS
+    type: mutualTLS
+    description: >-
+      Transaction Banking (TxB) requires a mutual-TLS connection (client
+      certificate) plus IP allowlisting as the transport-layer trust anchor.
+    applies_to:
+      - Goldman Sachs Transaction Banking (TxB) API
+    docs: https://developer.gs.com/docs/services/transaction-banking/auth-connection/
+  - name: TxBJWTStepUp
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    description: >-
+      On top of mTLS, each TxB call carries an RSA-signed JWT in the request
+      Authentication parameter. The JWT payload binds the caller identity
+      (subject = client, issuer = partner, audience = txb), the signing key id
+      (kid), and a SHA-256 hash of the presented mTLS certificate. Sensitive
+      operations (e.g. acting on a third-party account) require an additional
+      per-call step-up JWT.
+    applies_to:
+      - Goldman Sachs Transaction Banking (TxB) API
+    docs: https://developer.gs.com/docs/services/transaction-banking/auth-connection-part2
+  - name: RIACustodyOAuth2
+    type: oauth2
+    flow: clientCredentials
+    description: >-
+      GS Custody Solutions (RIA Custody) REST APIs authenticate with OAuth 2.0
+      using a clientId and clientSecret issued by GSCS after partner approval
+      (credentials delivered via Lockbox or secure email).
+    applies_to:
+      - Goldman Sachs RIA Custody API
+    docs: https://developer.gs.com/docs/services/ria-custody/authentication/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

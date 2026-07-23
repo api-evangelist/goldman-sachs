@@ -1,0 +1,40 @@
+# Goldman Sachs
+
+> Goldman Sachs is a leading global money-center investment bank whose public developer surface is institutional and professional-client oriented. It spans the Marquee digital platform (content, pricing & risk, hedging, indices, portfolio and market-data services plus the open-source GS Quant Python toolkit), the Transaction Banking (TxB) embedded-banking APIs for virtual accounts, payments and reporting across Fedwire/ACH/SWIFT rails, and the RIA Custody (GS Custody Solutions) REST APIs for advisor firms. Access is gated to institutional clients and approved partners; there is no self-serve consumer open-finance API.
+
+## APIs
+
+- [Content Services API](https://developer.gs.com/docs/): institutional Goldman Sachs content and commentary across equity, fixed income, currency and commodities markets (Marquee, OAuth 2.0).
+- [Pricing & Risk Services API](https://developer.gs.com/docs/gsquant/pricing-and-risk/): derivatives pricing and risk analytics, the engine behind GS Quant (Marquee, OAuth 2.0).
+- [Hedging Services API](https://developer.gs.com/docs/): portfolio hedging and optimization tools (Marquee, OAuth 2.0).
+- [Index Services API](https://marquee.gs.com/welcome/our-platform/systematic-trading-strategies): indices, systematic strategies and bespoke basket construction (Marquee, OAuth 2.0).
+- [Portfolio Services API](https://developer.gs.com/docs/): portfolio lifecycle management and reporting workflow (Marquee, OAuth 2.0).
+- [Data Services API](https://marquee.gs.com/welcome/our-platform/data-services): 400+ datasets across Equities, Fixed Income, Currencies, Commodities and Digital Assets plus a Security Master (Marquee, OAuth 2.0).
+- [Transaction Banking (TxB) API](https://developer.gs.com/docs/services/transaction-banking/): virtual accounts, payments/collections and reporting across Fedwire/ACH/SWIFT; mTLS + RSA-JWT step-up auth; documents webhooks.
+- [RIA Custody API](https://developer.gs.com/docs/services/ria-custody): custody REST APIs for advisor firms — onboarding, data files, ACH/wire transactions (OAuth 2.0).
+
+## SDKs
+
+- [GS Quant (Python)](https://pypi.org/project/gs-quant/): official open-source (Apache-2.0) Python toolkit wrapping the Marquee pricing, risk and data APIs — `pip install gs-quant`. Source: https://github.com/goldmansachs/gs-quant
+
+## Docs
+
+- [Developer Portal](https://developer.gs.com/)
+- [Documentation](https://developer.gs.com/docs/)
+- [GS Quant docs](https://developer.gs.com/docs/gsquant/)
+- [TxB authentication](https://developer.gs.com/docs/services/transaction-banking/auth-connection/)
+- [TxB webhooks](https://developer.gs.com/docs/services/transaction-banking/webhooks-intro/)
+- [TxB change log](https://developer.gs.com/docs/services/transaction-banking/change-log/)
+- [RIA Custody authentication](https://developer.gs.com/docs/services/ria-custody/authentication/)
+- [RIA Custody API standards](https://developer.gs.com/docs/services/ria-custody/api-standards/)
+
+## Artifacts
+
+- [Authentication profile](authentication/goldman-sachs-authentication.yml)
+- [API conventions](conventions/goldman-sachs-conventions.yml)
+- [TxB webhooks catalog](asyncapi/goldman-sachs-txb-webhooks.yml)
+- [Conformance](conformance/goldman-sachs-conformance.yml)
+- [Lifecycle](lifecycle/goldman-sachs-lifecycle.yml)
+- [Packages / SDKs](packages/goldman-sachs-packages.yml)
+- [Plans & pricing](plans/goldman-sachs-plans-pricing.yml)
+- [Rate limits](rate-limits/goldman-sachs-rate-limits.yml)

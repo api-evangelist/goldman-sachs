@@ -1,0 +1,61 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  https://developer.gs.com/docs/services/transaction-banking/,
+  https://developer.gs.com/docs/services/ria-custody/api-standards/,
+  rate-limits/goldman-sachs-rate-limits.yml
+notes: >-
+  Cross-cutting request/response semantics captured from the published API
+  standards and Transaction Banking documentation. Marquee/GS Quant is a
+  quant-analytics surface; TxB and RIA Custody are the transactional REST
+  surfaces where these conventions are most explicit.
+authentication:
+  style: mixed
+  detail: See authentication/goldman-sachs-authentication.yml (Marquee/RIA OAuth 2.0 client credentials; TxB mTLS + RSA-JWT with per-call step-up).
+idempotency:
+  supported: true
+  scope: Transaction Banking payment-origination (POST) endpoints
+  mechanism: >-
+    Payment-creation calls are designed to be safely retryable — a client-supplied
+    idempotency key on the payment-initiation request ensures a retried submission
+    executes the payment at most once, preventing duplicate value transfer on
+    network retry. Recommended alongside exponential backoff on 429/503.
+  source: >-
+    developer.gs.com Transaction Banking payments docs; rate-limits/goldman-sachs-rate-limits.yml
+    (Idempotency policy)
+pagination:
+  style: unknown
+  detail: >-
+    RIA Custody follows predictable REST resource-oriented URLs with JSON
+    responses; specific pagination parameters are documented in the gated API
+    reference and not published as an OpenAPI.
+error_envelope:
+  style: json
+  detail: >-
+    JSON-encoded error responses; standard HTTP status codes (400/401/403/404/429/503).
+    A formal RFC 9457 problem+json contract is not documented on the public surface.
+request_encoding:
+  ria_custody: form-encoded requests, JSON-encoded responses
+  txb: JSON over HTTPS with mTLS
+versioning:
+  scheme: uri-path
+  detail: Versioned resource paths; changes tracked via the TxB change log.
+  changelog: https://developer.gs.com/docs/services/transaction-banking/change-log/
+webhooks:
+  supported: true
+  detail: >-
+    TxB publishes webhooks for real-time payment-status and transaction-state
+    change notifications, reducing the need to poll. See
+    asyncapi/goldman-sachs-txb-webhooks.yml.
+  docs: https://developer.gs.com/docs/services/transaction-banking/webhooks-intro/
+rate_limit_signaling:
+  detail: 429 throttling with exponential-backoff guidance; numeric limits governed by client agreement.
+  source: rate-limits/goldman-sachs-rate-limits.yml
+cross_links:
+  authentication: authentication/goldman-sachs-authentication.yml
+  lifecycle: lifecycle/goldman-sachs-lifecycle.yml
+  webhooks: asyncapi/goldman-sachs-txb-webhooks.yml
+  rate_limits: rate-limits/goldman-sachs-rate-limits.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

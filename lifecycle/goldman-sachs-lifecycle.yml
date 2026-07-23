@@ -1,0 +1,31 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  https://developer.gs.com/docs/services/transaction-banking/change-log/,
+  https://developer.gs.com/docs/services/ria-custody/api-standards/
+notes: >-
+  Lifecycle posture from the published developer docs. Goldman Sachs maintains a
+  dated Transaction Banking change log and a documented RIA Custody API-standards
+  page. No public status page (status.gs.com / status.developer.gs.com) was
+  found, and no formal RFC 8594 Sunset/Deprecation-header policy is published, so
+  neither a StatusPage nor a Deprecation pointer is emitted.
+versioning:
+  scheme: uri-path
+  detail: Versioned resource paths; breaking changes and additions announced via the TxB change log.
+  changelog: https://developer.gs.com/docs/services/transaction-banking/change-log/
+change_log:
+  present: true
+  url: https://developer.gs.com/docs/services/transaction-banking/change-log/
+  scheme: dated entries on the TxB developer portal
+api_standards:
+  ria_custody: https://developer.gs.com/docs/services/ria-custody/api-standards/
+status_page: null
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+sla:
+  url: null
+  detail: Availability and support terms governed by the institutional client agreement.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

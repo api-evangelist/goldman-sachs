@@ -1,0 +1,38 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  https://developer.gs.com/docs/services/transaction-banking/webhooks-intro/,
+  https://developer.gs.com/docs/services/transaction-banking/manage-notifications/
+spec_type: Webhooks
+notes: >-
+  Goldman Sachs Transaction Banking (TxB) documents a webhook / notification
+  surface for real-time, push-based updates so clients stop polling the REST
+  APIs. Captured as a webhook catalog from the published docs — Goldman Sachs
+  does not publish a machine-readable AsyncAPI document, so no AsyncAPI spec is
+  fabricated here. The Marquee/GS Quant analytics surfaces have no event feed.
+service: Transaction Banking (TxB)
+transport: HTTPS webhook (provider POSTs to a client-registered endpoint)
+delivery: >-
+  Notifications are pushed only when a subscribed object changes state, giving
+  fresher data than polling. Payment-status transitions are the primary event
+  class. A Positive Pay / incoming-payment review notification flow is also
+  documented under manage-notifications.
+event_classes:
+  - name: payment-status-change
+    description: >-
+      Real-time updates as an originated payment moves through its lifecycle
+      (submitted, processing, completed, returned/rejected) across the Fedwire,
+      ACH and SWIFT rails.
+    source: https://developer.gs.com/docs/services/transaction-banking/webhooks-intro/
+  - name: incoming-payment-notification
+    description: >-
+      Notifications for incoming payments, including Positive Pay review of
+      incoming items.
+    source: https://developer.gs.com/docs/services/transaction-banking/manage-notifications/
+security:
+  detail: >-
+    Webhook consumers sit behind the same mTLS + allowlisting trust model as the
+    TxB request APIs; verify delivery authenticity per the TxB integration guide.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -242,6 +242,10 @@ apis:
         type: Authentication
       - url: https://developer.gs.com/docs/services/transaction-banking/change-log/
         type: ChangeLog
+      - url: https://developer.gs.com/docs/services/transaction-banking/webhooks-intro/
+        type: Webhooks
+      - url: asyncapi/goldman-sachs-txb-webhooks.yml
+        type: Webhooks
     description: >-
       Goldman Sachs Transaction Banking (TxB) provides programmatic access for
       eligible partners and clients to embed treasury and banking capabilities
@@ -304,6 +308,22 @@ common:
     url: rate-limits/goldman-sachs-rate-limits.yml
   - type: FinOps
     url: finops/goldman-sachs-finops.yml
+  - type: Authentication
+    url: authentication/goldman-sachs-authentication.yml
+  - type: Packages
+    url: packages/goldman-sachs-packages.yml
+  - type: SDKs
+    url: packages/goldman-sachs-packages.yml
+  - type: Conventions
+    url: conventions/goldman-sachs-conventions.yml
+  - type: Idempotency
+    url: conventions/goldman-sachs-conventions.yml
+  - type: Conformance
+    url: conformance/goldman-sachs-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/goldman-sachs-lifecycle.yml
+  - type: LLMsTxt
+    url: llms/goldman-sachs-llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
