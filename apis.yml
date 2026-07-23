@@ -1,21 +1,47 @@
 aid: goldman-sachs
 name: Goldman Sachs
+kind: company
 description: >-
-  Incorporate the full range of Goldman Sachs services within your own
-  applications and processes to drive efficiency, architect for scale, and
-  create new business lines by leveraging our scale and market coverage.
+  Goldman Sachs is a leading global money-center investment bank and financial
+  services firm. Its public developer surface is institutional and
+  professional-client oriented, spanning the Marquee digital platform (content,
+  pricing and risk, hedging, indices, portfolio, and market-data services plus
+  the open-source GS Quant Python toolkit), the Transaction Banking (TxB)
+  embedded-banking APIs for virtual accounts, payments and reporting across
+  Fedwire/ACH/SWIFT rails, and the RIA Custody (GS Custody Solutions) REST APIs
+  for advisor firms. Access is gated to institutional clients and approved
+  partners; there is no self-serve consumer open-finance API.
 type: Index
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/goldman-sachs.png
 tags:
   - Banking
   - Financial
+  - Investment Banking
+  - Money Center
+  - Institutional
+  - Transaction Banking
+  - Custody
+  - Market Data
+  - United States
   - Fortune 100
 url: >-
   https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/apis.yml
 created: '2024-03-13'
-modified: '2026-04-28'
+modified: '2026-07-23'
 specificationVersion: '0.19'
 apis:
   - aid: goldman-sachs:goldman-sachs-content-services-api
@@ -24,123 +50,260 @@ apis:
       - Content
       - Insights
       - Research
+      - Marquee
+      - Institutional
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
+    humanURL: https://developer.gs.com/docs/
+    baseURL: https://api.marquee.gs.com
     properties:
-      - url: https://developer.gs.com/docs/#Products%20and%20Platforms
+      - url: https://developer.gs.com/docs/
         type: Documentation
+      - url: https://marquee.gs.com/welcome/our-platform/data-services
+        type: Website
     description: >-
-      Leverage insights from across Goldman Sachs with client-focused content on
-      equity, fixed income, currency and commodities markets. Clients can access
-      both historical and real-time fundamental insights and analysis.
+      Part of the Marquee developer platform, the Content Services API lets
+      institutional clients programmatically consume client-focused Goldman
+      Sachs content and commentary across equity, fixed income, currency and
+      commodities markets. Clients can access both historical and real-time
+      fundamental insights and analysis for use in their own research,
+      dashboards and investment workflows. Access is OAuth 2.0 gated to
+      approved Marquee institutional clients.
   - aid: goldman-sachs:goldman-sachs-pricing-risk-services-api
     name: Goldman Sachs Pricing & Risk Services API
     tags:
       - Pricing
       - Risk
       - Analytics
+      - Marquee
+      - Derivatives
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
+    humanURL: https://developer.gs.com/docs/gsquant/pricing-and-risk/
+    baseURL: https://api.marquee.gs.com
     properties:
-      - url: https://developer.gs.com/docs/#Products%20and%20Platforms
+      - url: https://developer.gs.com/docs/gsquant/pricing-and-risk/
         type: Documentation
+      - url: https://marquee.gs.com/welcome/products/data-risk-analytics
+        type: Website
     description: >-
-      Leverage our industry-leading models and risk analytics tools to gain a
-      deeper understanding of your portfolio exposures and risks.
+      The Pricing & Risk Services API exposes Goldman Sachs' industry-leading
+      derivatives pricing and risk analytics models so institutional clients
+      can price instruments, compute risk measures and gain a deeper
+      understanding of their portfolio exposures. It is the same analytics
+      engine surfaced through the open-source GS Quant Python toolkit and is
+      accessed programmatically over the Marquee platform using OAuth 2.0
+      application credentials issued to institutional clients.
   - aid: goldman-sachs:goldman-sachs-hedging-services-api
     name: Goldman Sachs Hedging Services API
     tags:
       - Hedging
       - Optimization
       - Risk
+      - Marquee
+      - Portfolio
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
+    humanURL: https://developer.gs.com/docs/
+    baseURL: https://api.marquee.gs.com
     properties:
-      - url: https://developer.gs.com/docs/#Products%20and%20Platforms
+      - url: https://developer.gs.com/docs/
         type: Documentation
+      - url: https://marquee.gs.com/welcome/products/data-risk-analytics
+        type: Website
     description: >-
-      Tailor your portfolio exposures and risks using our hedging and
-      optimization tools. Dynamically manage objectives and constraints while
-      controlling for cost and tradability to meet your investment goals.
+      The Hedging Services API lets institutional clients tailor portfolio
+      exposures and risks using Goldman Sachs' hedging and optimization tools.
+      Clients can dynamically manage objectives and constraints while
+      controlling for cost and tradability to meet their investment goals,
+      programmatically constructing and rebalancing hedges. Delivered over the
+      Marquee platform with OAuth 2.0 authentication for approved institutional
+      clients.
   - aid: goldman-sachs:goldman-sachs-index-services-api
     name: Goldman Sachs Index Services API
     tags:
       - Indices
       - Baskets
       - Investment
+      - Marquee
+      - Systematic Strategies
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
+    humanURL: https://marquee.gs.com/welcome/our-platform/systematic-trading-strategies
+    baseURL: https://api.marquee.gs.com
     properties:
-      - url: https://developer.gs.com/docs/#Products%20and%20Platforms
+      - url: https://developer.gs.com/docs/
         type: Documentation
+      - url: https://marquee.gs.com/welcome/our-platform/systematic-trading-strategies
+        type: Website
     description: >-
-      Access the full range of Goldman Sachs indices and basket products, or
-      create bespoke solutions to tailor your own investment strategies. Design,
-      create, and rebalance fully-customized, ready-to-trade basket solutions to
-      express thematic and risk views.
+      The Index Services API provides access to the full range of Goldman Sachs
+      indices, systematic trading strategies and basket products, or the ability
+      to create bespoke solutions to tailor investment strategies. Clients can
+      design, create and rebalance fully-customized, ready-to-trade basket
+      solutions to express thematic and risk views, and visualize and
+      deconstruct index performance across time periods. Access is gated to
+      Marquee institutional clients via OAuth 2.0.
   - aid: goldman-sachs:goldman-sachs-portfolio-services-api
     name: Goldman Sachs Portfolio Services API
     tags:
       - Portfolio
       - Reporting
       - Workflow
+      - Marquee
+      - Analytics
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
+    humanURL: https://developer.gs.com/docs/
+    baseURL: https://api.marquee.gs.com
     properties:
-      - url: https://developer.gs.com/docs/#Products%20and%20Platforms
+      - url: https://developer.gs.com/docs/
         type: Documentation
+      - url: https://marquee.gs.com/welcome/products/data-risk-analytics
+        type: Website
     description: >-
-      Programmatically manage your portfolio lifecycle from creation and update
-      to scheduling reports with full control over visibility and sharing.
-      Automate your portfolio workflow using our APIs - leaving you to focus on
-      the alpha driving decisions.
+      The Portfolio Services API lets institutional clients programmatically
+      manage the portfolio lifecycle from creation and update through to
+      scheduling reports, with full control over visibility and sharing.
+      Clients automate their portfolio workflow and analytics through the
+      Marquee platform so their teams can focus on the alpha-driving decisions
+      rather than operational plumbing. Authenticated with OAuth 2.0
+      application credentials issued to approved institutional clients.
   - aid: goldman-sachs:goldman-sachs-data-services-api
     name: Goldman Sachs Data Services API
     tags:
       - Data
       - Market Data
       - Research
+      - Marquee
+      - Security Master
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.gs.com/docs/#Products%20and%20Platforms
+    humanURL: https://marquee.gs.com/welcome/our-platform/data-services
+    baseURL: https://api.marquee.gs.com
     properties:
-      - url: https://developer.gs.com/docs/#Products%20and%20Platforms
+      - url: https://developer.gs.com/docs/gsquant/data/accessing-data/querying-data/
         type: Documentation
+      - url: https://developer.gs.com/docs/gsquant/data/accessing-data/secmaster_sdk/
+        type: Documentation
+      - url: https://marquee.gs.com/welcome/our-platform/data-services
+        type: Website
     description: >-
-      Integrate our data and insights into your tools and processes. Access the
-      same high-quality market, execution, and research data trusted by our
-      market professionals, as well as a variety of unique Goldman Sachs content
-      for use in quantitative and data-driven strategies and analytics,
-      including a Security Master with deep history.
+      The Data Services API integrates Goldman Sachs data and insights into
+      client tools and processes, exposing over 400 datasets spanning Equities,
+      Fixed Income, Currencies, Commodities and Digital Assets. Clients access
+      the same high-quality market, execution and research data trusted by
+      Goldman Sachs market professionals, plus a unified data platform with
+      third-party partner data and a Security Master with deep history, for use
+      in quantitative and data-driven strategies. Queried programmatically over
+      Marquee (and via the GS Quant toolkit) using OAuth 2.0 credentials.
+  - aid: goldman-sachs:goldman-sachs-gs-quant-toolkit
+    name: GS Quant Python Toolkit
+    tags:
+      - SDK
+      - Python
+      - Quantitative Finance
+      - Marquee
+      - Open Source
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.gs.com/docs/gsquant/
+    baseURL: https://api.marquee.gs.com
+    properties:
+      - url: https://developer.gs.com/docs/gsquant/
+        type: Documentation
+      - url: https://developer.gs.com/docs/gsquant/authentication/gs-session/
+        type: Authentication
+      - url: https://github.com/goldmansachs/gs-quant
+        type: SourceCode
+      - url: https://marquee.gs.com/welcome/our-platform/gs-quant
+        type: Website
+    description: >-
+      GS Quant is Goldman Sachs' open-source Python toolkit for quantitative
+      finance, distributed on GitHub and PyPI, that wraps the Marquee pricing,
+      risk and data APIs behind a Python client. Developers authenticate a
+      GsSession with OAuth 2.0 client_id / client_secret application
+      credentials (or a Marquee cookie session) to price instruments, run risk,
+      backtest strategies and query datasets against the api.marquee.gs.com
+      endpoints. It is the primary documented, self-serve-installable developer
+      surface over the otherwise institution-gated Marquee APIs.
   - aid: goldman-sachs:goldman-sachs-transaction-banking-api
-    name: Goldman Sachs Transaction Banking API
+    name: Goldman Sachs Transaction Banking (TxB) API
     tags:
       - Banking
       - Payments
       - Transaction Banking
+      - Embedded Finance
+      - United States
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.gs.com/docs/services/transaction-banking/
+    baseURL: https://api.txb.gs.com
     properties:
       - url: https://developer.gs.com/docs/services/transaction-banking/
         type: Documentation
+      - url: https://developer.gs.com/docs/services/transaction-banking/api-support/
+        type: Documentation
+      - url: https://developer.gs.com/docs/services/transaction-banking/payments/
+        type: Documentation
+      - url: https://developer.gs.com/docs/services/transaction-banking/auth-connection/
+        type: Authentication
+      - url: https://developer.gs.com/docs/services/transaction-banking/change-log/
+        type: ChangeLog
     description: >-
-      Goldman Sachs Transaction Banking provides programmatic access to virtual
-      and physical accounts, ACH, wire, and book transfers, and balance and
-      transaction reporting for treasury and embedded banking workflows.
+      Goldman Sachs Transaction Banking (TxB) provides programmatic access for
+      eligible partners and clients to embed treasury and banking capabilities
+      into their own ecosystem, organized around three functional domains:
+      creating virtual accounts, originating payments and collections, and
+      tracking balances and transaction activity. TxB APIs are payment-rail
+      agnostic, executing domestic and cross-border payments across US Fedwire,
+      US ACH and SWIFT. They are secured with mutual TLS and IP allowlisting,
+      with per-call JWT step-up authentication; the documented test base is
+      api.test.txb.gs.com. HTML-only docs, no public OpenAPI download.
+  - aid: goldman-sachs:goldman-sachs-ria-custody-api
+    name: Goldman Sachs RIA Custody API
+    tags:
+      - Custody
+      - RIA
+      - Advisors
+      - Banking
+      - United States
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.gs.com/docs/services/ria-custody
+    properties:
+      - url: https://developer.gs.com/docs/services/ria-custody
+        type: Documentation
+      - url: https://developer.gs.com/docs/services/ria-custody/api-standards/
+        type: Documentation
+      - url: https://developer.gs.com/docs/services/ria-custody/authentication/
+        type: Authentication
+      - url: https://developer.gs.com/docs/services/ria-custody/ach-wire-transactions/
+        type: Documentation
+      - url: https://developer.gs.com/docs/services/ria-custody/onboarding-workflow/
+        type: Documentation
+    description: >-
+      The Goldman Sachs Custody Solutions (GSCS) RIA Custody platform exposes
+      REST APIs that let advisor firms and third-party integration partners
+      build applications on top of institutional-grade custody functionality
+      for growth-focused independent advisors and RIAs. Organized around REST
+      with predictable resource-oriented URLs, form-encoded requests and
+      JSON-encoded responses, it covers account onboarding workflows, data
+      files and ACH/wire transactions. Authentication uses the OAuth 2.0
+      standard, with a clientId and clientSecret issued by GSCS after approval
+      via Lockbox or secure email. HTML-only docs, no public OpenAPI download.
 common:
   - type: DomainSecurity
     url: security/goldman-sachs-domain-security.yml
+  - type: Website
+    url: https://www.goldmansachs.com/
+  - type: DeveloperPortal
+    url: https://developer.gs.com/
+  - type: Documentation
+    url: https://developer.gs.com/docs/
+  - type: GitHubOrganization
+    url: https://github.com/goldmansachs
   - type: LinkedIn
     url: https://www.linkedin.com/company/goldman-sachs
-  - url: https://developer.gs.com/
-    type: Portal
-  - url: https://developer.gs.com/docs/
-    type: Documentation
-  - url: https://marquee.gs.com/
-    type: Website
-  - url: https://developer.gs.com/blog/posts
-    type: Blog
-  - url: https://github.com/goldmansachs/
-    type: GitHubOrganization
+  - type: Blog
+    url: https://developer.gs.com/blog/posts
+  - type: Plans
+    url: plans/goldman-sachs-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/goldman-sachs-rate-limits.yml
+  - type: FinOps
+    url: finops/goldman-sachs-finops.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
