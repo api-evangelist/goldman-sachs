@@ -288,6 +288,10 @@ apis:
       standard, with a clientId and clientSecret issued by GSCS after approval
       via Lockbox or secure email. HTML-only docs, no public OpenAPI download.
 common:
+  - type: PrivacyPolicy
+    url: https://www.goldmansachs.com/privacy-and-cookies
+  - type: Login
+    url: https://www.goldmansachs.com/login
   - type: DomainSecurity
     url: security/goldman-sachs-domain-security.yml
   - type: Website
