@@ -54,7 +54,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/apis.yml
 created: '2024-03-13'
 modified: '2026-07-23'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: goldman-sachs:goldman-sachs-content-services-api
     name: Goldman Sachs Content Services API
