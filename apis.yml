@@ -157,6 +157,12 @@ apis:
     tags:
       - Portfolio
       - Reporting
+      - Workflows
+      - Marquee
+      - Analytics
+    tags_raw:
+      - Portfolio
+      - Reporting
       - Workflow
       - Marquee
       - Analytics
@@ -206,6 +212,12 @@ apis:
   - aid: goldman-sachs:goldman-sachs-gs-quant-toolkit
     name: GS Quant Python Toolkit
     tags:
+      - SDK
+      - Python
+      - Quantitative Finance
+      - Marquee
+      - Open-Source
+    tags_raw:
       - SDK
       - Python
       - Quantitative Finance
