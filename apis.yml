@@ -13,16 +13,19 @@ description: >-
   partners; there is no self-serve consumer open-finance API.
 type: Index
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - goldmansachs/gs-quant
   open_source: unknown
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
@@ -40,6 +43,17 @@ position: Consuming
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/goldman-sachs.png
 tags:
+  - Banking
+  - Finance
+  - Investment Banking
+  - Money Center
+  - Institutional
+  - Transaction Banking
+  - Custody
+  - Market Data
+  - United States
+  - Fortune 100
+tags_raw:
   - Banking
   - Financial
   - Investment Banking
@@ -84,6 +98,12 @@ apis:
     name: Goldman Sachs Pricing & Risk Services API
     tags:
       - Pricing
+      - Risk Management
+      - Analytics
+      - Marquee
+      - Derivatives
+    tags_raw:
+      - Pricing
       - Risk
       - Analytics
       - Marquee
@@ -107,6 +127,12 @@ apis:
   - aid: goldman-sachs:goldman-sachs-hedging-services-api
     name: Goldman Sachs Hedging Services API
     tags:
+      - Hedging
+      - Optimization
+      - Risk Management
+      - Marquee
+      - Portfolio
+    tags_raw:
       - Hedging
       - Optimization
       - Risk
@@ -216,13 +242,14 @@ apis:
       - Python
       - Quantitative Finance
       - Marquee
-      - Open-Source
+      - Open Source
     tags_raw:
       - SDK
       - Python
       - Quantitative Finance
       - Marquee
       - Open Source
+      - Open-Source
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.gs.com/docs/gsquant/
     baseURL: https://api.marquee.gs.com
