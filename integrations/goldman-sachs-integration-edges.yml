@@ -9,6 +9,7 @@ checked:
 - https://composio.dev/toolkits/goldman-sachs
 - https://monid.ai/tools/goldman-sachs
 - https://n8n.io/integrations/goldman-sachs/
+- https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
 - https://www.openbanking.org.uk/regulated-providers/goldman-sachs-bank-usa-london-branch/
 - https://zapier.com/apps/goldman-sachs/integrations
 summary: null
@@ -31,4 +32,129 @@ edges:
     api_families: null
     detected_by: sweep-standard-registers.py
     detected: '2026-10-14'
+- partner_name: ISO 10383 (MIC)
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+  source: mic
+  category: registered trading venues and market segments
+  contract_reference:
+    register: ISO 10383 Market Identifier Codes (ISO 20022 registration authority)
+    spec_file: null
+    standard: ISO 10383
+    role: venue operator
+    matched_domain: goldmansachs.com
+    matched_by: domain:goldmansachs.com
+    categories:
+    - ATSS
+    - NSPD
+    - OTHR
+    - SINT
+    operating_mics:
+    - GIPB
+    - GSAL
+    - GSBE
+    - GSCO
+    - GSIB
+    - GSIL
+    - SGMA
+    mics:
+    - mic: GIPB
+      operating_mic: GIPB
+      segment: OPRT
+      market: GOLDMAN SACHS INTERNATIONAL PARIS BRANCH
+      category: NSPD
+      legal_name: ''
+      country: FR
+    - mic: GSEI
+      operating_mic: GSBE
+      segment: SGMT
+      market: GOLDMAN SACHS BANK EUROPE SE - SYSTEMATIC INTERNALISER
+      category: SINT
+      legal_name: ''
+      country: DE
+    - mic: GSBE
+      operating_mic: GSBE
+      segment: OPRT
+      market: GOLDMAN SACHS BANK EUROPE SE
+      category: NSPD
+      legal_name: ''
+      country: DE
+    - mic: GSAL
+      operating_mic: GSAL
+      segment: OPRT
+      market: GOLDMAN SACHS (ASIA) LLC
+      category: NSPD
+      legal_name: GOLDMAN SACHS (ASIA) L.L.C.
+      country: HK
+    - mic: GSIB
+      operating_mic: GSIB
+      segment: OPRT
+      market: GOLDMAN SACHS INTERNATIONAL BANK
+      category: NSPD
+      legal_name: GOLDMAN SACHS INTERNATIONAL BANK
+      country: GB
+    - mic: BISI
+      operating_mic: GSIB
+      segment: SGMT
+      market: GOLDMAN SACHS INTERNATIONAL BANK - SYSTEMATIC INTERNALISER
+      category: SINT
+      legal_name: GOLDMAN SACHS INTERNATIONAL BANK
+      country: GB
+    - mic: SGMT
+      operating_mic: GSCO
+      segment: SGMT
+      market: SIGMA X2
+      category: ATSS
+      legal_name: GOLDMAN SACHS & CO. LLC
+      country: US
+    - mic: GSCO
+      operating_mic: GSCO
+      segment: OPRT
+      market: GOLDMAN SACHS AND CO.
+      category: NSPD
+      legal_name: GOLDMAN SACHS & CO. LLC
+      country: US
+    - mic: GSIL
+      operating_mic: GSIL
+      segment: OPRT
+      market: GOLDMAN SACHS INTERNATIONAL
+      category: NSPD
+      legal_name: ''
+      country: GB
+    - mic: GSSI
+      operating_mic: GSIL
+      segment: SGMT
+      market: GOLDMAN SACHS INTERNATIONAL - SYSTEMATIC INTERNALISER
+      category: SINT
+      legal_name: ''
+      country: GB
+    - mic: SGMA
+      operating_mic: SGMA
+      segment: OPRT
+      market: GOLDMAN SACH MTF
+      category: NSPD
+      legal_name: ''
+      country: US
+    - mic: GSXM
+      operating_mic: GSAL
+      segment: SGMT
+      market: GSX MICRO
+      category: OTHR
+      legal_name: GOLDMAN SACHS (ASIA) L.L.C.
+      country: HK
+    - mic: SGBX
+      operating_mic: GSCO
+      segment: SGMT
+      market: SIGMA X2 - BENCHMARK CROSS
+      category: ATSS
+      legal_name: GOLDMAN SACHS & CO. LLC
+      country: US
+    detected_by: sweep-capital-markets.py
+    detected: '2026-10-15'
+  detected_by: sweep-capital-markets.py
+  first_seen: '2026-10-15'
 templates: []
