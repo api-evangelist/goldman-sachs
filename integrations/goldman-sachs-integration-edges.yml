@@ -15,6 +15,10 @@ checked:
 - https://www.openbanking.org.uk/regulated-providers/goldman-sachs-bank-usa-london-branch/
 - https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
 - https://zapier.com/apps/goldman-sachs/integrations
+- https://dadosabertos.bcb.gov.br/api/3/action/package_show?id=relacao-de-instituicoes-em-funcionamento-no-pais
+- https://olinda.bcb.gov.br/olinda/servico/BcBase/versao/v2/odata/
+- https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/
+- https://olinda.bcb.gov.br/olinda/servico/Instituicoes_em_funcionamento/versao/v1/odata/
 summary: null
 marketplace_apps: []
 edges:
@@ -193,4 +197,39 @@ edges:
     detected: '2026-10-19'
   detected_by: sweep-capital-markets.py
   first_seen: '2026-10-19'
+- partner_name: Banco Central do Brasil authorized banks
+  partner: null
+  partner_match: register
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.bcb.gov.br/estabilidadefinanceira/relacao_instituicoes_funcionamento
+  category: Brazil BCB-authorized bank
+  contract_reference:
+    register: Banco Central do Brasil authorized banks
+    spec_file: null
+    standard: null
+    role: authorized-bank
+    institution_class: incumbent
+    registrations:
+    - registered_name: GOLDMAN SACHS DO BRASIL BANCO MULTIPLO S.A.
+      register_status: authorized-active
+      register_country: BR
+      register_id: CNPJ 04332281
+      segment: Banco Múltiplo
+      matched_domain: goldmansachs.com
+      matched_by: domain
+      evidence_url: https://www.bcb.gov.br/estabilidadefinanceira/relacao_instituicoes_funcionamento
+      licences:
+      - Banco Múltiplo
+      situation: Autorizada em Atividade
+      tariff_list_confirmed: true
+      domain_source: filed-website
+    signal_note: 'participation only: a Banco Central do Brasil authorisation to operate; no API conformance is
+      published by this register'
+    detected_by: sweep-brazil-bcb-authorized-institutions.py
+    detected: '2026-10-22'
+  detected_by: sweep-brazil-bcb-authorized-institutions.py
+  first_seen: '2026-10-22'
 templates: []
