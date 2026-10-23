@@ -216,3 +216,69 @@
     detected: '2026-10-22'
   status: not-a-workflow
   arazzo: null
+- slug: goldman-sachs-finos-projects-maintainer
+  label: FINOS projects (maintainer)
+  partner: finos
+  partner_name: FINOS projects (maintainer)
+  category: FINOS project maintainership
+  type: register
+  channel: standard-directory
+  evidence: https://github.com/finos/legend-studio/blob/HEAD/MAINTAINERS.md
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: FINOS project MAINTAINERS.md (github.com/finos/<repo>)
+    spec_file: null
+    standard: FINOS
+    role: finos-project-maintainer
+    registered_name: Goldman Sachs
+    registered_names:
+    - Goldman Sachs
+    matched_domain: goldmansachs.com
+    matched_by: domain
+    matched_via:
+    - member-homepage
+    api_families:
+    - Legend
+    - Risk Navigator
+    api_families_basis: MAINTAINERS.md (maintains, not implements)
+    finos_projects:
+    - project: Legend
+      maturity: incubating
+      repos:
+      - https://github.com/finos/legend-studio/blob/HEAD/MAINTAINERS.md
+    - project: Risk Navigator
+      maturity: labs
+      repos:
+      - https://github.com/finos-osera/risk-navigator/blob/HEAD/MAINTAINERS.md
+    signal_note: maintainership of FINOS projects (maintains, not implements); per-edge signal = projects maintained
+      (api_families), never the maintainer count
+    detected_by: sweep-finos-open-source-fintech.py
+    detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
+- slug: goldman-sachs-finos-membership
+  label: FINOS (membership)
+  partner: finos
+  partner_name: FINOS (membership)
+  category: FINOS membership
+  type: register
+  channel: standard-directory
+  evidence: https://www.finos.org/members
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: FINOS members (www.finos.org/members)
+    spec_file: null
+    standard: FINOS
+    role: finos-member
+    registered_name: Goldman Sachs
+    website: http://www.goldmansachs.com/
+    matched_domain: goldmansachs.com
+    matched_by: domain
+    signal_note: 'participation only: FINOS membership is standard-participant evidence, not depth. The tier (partner_tier)
+      is CONTEXT, never counted'
+    detected_by: sweep-finos-open-source-fintech.py
+    detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
