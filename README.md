@@ -1,4 +1,4 @@
-# Goldman Sachs (goldman-sachs)
+# Goldman Sachs
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,129 +64,120 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Incorporate the full range of Goldman Sachs services within your own applications and processes to drive efficiency, architect for scale, and create new business lines by leveraging Goldman Sachs scale and market coverage. The Marquee developer platform exposes content, pricing and risk, hedging, indices, portfolio, and data services, while Transaction Banking offers programmatic access to virtual accounts and payments.
+Goldman Sachs is a leading global money-center investment bank and financial services firm. Its public developer surface is institutional and professional-client oriented, spanning the Marquee digital platform (content, pricing and risk, hedging, indices, portfolio, and market-data services plus the open-source GS Quant Python toolkit), the Transaction Banking (TxB) embedded-banking APIs for virtual accounts, payments and reporting across Fedwire/ACH/SWIFT rails, and the RIA Custody (GS Custody Solutions) REST APIs for advisor firms. Access is gated to institutional clients and approved partners; there is no self-serve consumer open-finance API.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/goldman-sachs/refs/heads/main/apis.yml)
+**Areas:** Banking · Finance · Investment Banking · Money Center · Institutional · Transaction Banking · Custody · Market Data · United States · Fortune 100
 
-## Scope
+## Goldman Sachs on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Goldman Sachs is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/goldman-sachs/](https://apis.io/providers/goldman-sachs/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (9)
 
-- Banking
-- Financial
+- [Goldman Sachs Content Services API](https://apis.io/apis/goldman-sachs/goldman-sachs-content-services-api/) — Part of the Marquee developer platform, the Content Services API lets institutional clients programmatically consume client-focused Goldman Sachs content…
+- [Goldman Sachs Pricing & Risk Services API](https://apis.io/apis/goldman-sachs/goldman-sachs-pricing-risk-services-api/) — The Pricing & Risk Services API exposes Goldman Sachs' industry-leading derivatives pricing and risk analytics models so institutional clients can price…
+- [Goldman Sachs Hedging Services API](https://apis.io/apis/goldman-sachs/goldman-sachs-hedging-services-api/) — The Hedging Services API lets institutional clients tailor portfolio exposures and risks using Goldman Sachs' hedging and optimization tools. Clients can…
+- [Goldman Sachs Index Services API](https://apis.io/apis/goldman-sachs/goldman-sachs-index-services-api/) — The Index Services API provides access to the full range of Goldman Sachs indices, systematic trading strategies and basket products, or the ability to…
+- [Goldman Sachs Portfolio Services API](https://apis.io/apis/goldman-sachs/goldman-sachs-portfolio-services-api/) — The Portfolio Services API lets institutional clients programmatically manage the portfolio lifecycle from creation and update through to scheduling…
+- [Goldman Sachs Data Services API](https://apis.io/apis/goldman-sachs/goldman-sachs-data-services-api/) — The Data Services API integrates Goldman Sachs data and insights into client tools and processes, exposing over 400 datasets spanning Equities, Fixed…
+- [GS Quant Python Toolkit](https://apis.io/apis/goldman-sachs/goldman-sachs-gs-quant-toolkit/) — GS Quant is Goldman Sachs' open-source Python toolkit for quantitative finance, distributed on GitHub and PyPI, that wraps the Marquee pricing, risk and…
+- [Goldman Sachs Transaction Banking (TxB) API](https://apis.io/apis/goldman-sachs/goldman-sachs-transaction-banking-api/) — Goldman Sachs Transaction Banking (TxB) provides programmatic access for eligible partners and clients to embed treasury and banking capabilities into their…
+- [Goldman Sachs RIA Custody API](https://apis.io/apis/goldman-sachs/goldman-sachs-ria-custody-api/) — The Goldman Sachs Custody Solutions (GSCS) RIA Custody platform exposes REST APIs that let advisor firms and third-party integration partners build…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-03-13
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### AsyncAPI (1)
 
-### Goldman Sachs Content Services API
-Leverage insights from across Goldman Sachs with client-focused content on equity, fixed income, currency and commodities markets. Clients can access both historical and real-time fundamental insights and analysis.
+Event-driven and webhook contracts.
 
-**Human URL:** [https://developer.gs.com/docs/#Products%20and%20Platforms](https://developer.gs.com/docs/#Products%20and%20Platforms)
+- [Goldman Sachs Txb Webhooks](https://apis.io/asyncapis/goldman-sachs/goldman-sachs-txb-webhooks/)
 
-#### Tags
-- Content
-- Insights
-- Research
+#### Security (2)
 
-#### Properties
-- [Documentation](https://developer.gs.com/docs/#Products%20and%20Platforms)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Goldman Sachs Pricing & Risk Services API
-Leverage industry-leading models and risk analytics tools to gain a deeper understanding of portfolio exposures and risks.
+- [Goldman Sachs Authentication](https://apis.io/security/goldman-sachs/goldman-sachs-authentication/)
+- [Goldman Sachs Domain Security](https://apis.io/security/goldman-sachs/goldman-sachs-domain-security/)
 
-**Human URL:** [https://developer.gs.com/docs/#Products%20and%20Platforms](https://developer.gs.com/docs/#Products%20and%20Platforms)
+#### Plans and pricing (1)
 
-#### Tags
-- Pricing
-- Risk
-- Analytics
+Published plans, tiers and prices.
 
-#### Properties
-- [Documentation](https://developer.gs.com/docs/#Products%20and%20Platforms)
+- [Goldman Sachs Plans Pricing](https://apis.io/plans/goldman-sachs/goldman-sachs-plans-pricing/)
 
-### Goldman Sachs Hedging Services API
-Tailor portfolio exposures and risks using hedging and optimization tools. Dynamically manage objectives and constraints while controlling for cost and tradability to meet investment goals.
+#### Rate limits (1)
 
-**Human URL:** [https://developer.gs.com/docs/#Products%20and%20Platforms](https://developer.gs.com/docs/#Products%20and%20Platforms)
+Published request limits.
 
-#### Tags
-- Hedging
-- Optimization
-- Risk
+- [Goldman Sachs Rate Limits](https://apis.io/rate-limits/goldman-sachs/goldman-sachs-rate-limits/)
 
-#### Properties
-- [Documentation](https://developer.gs.com/docs/#Products%20and%20Platforms)
+#### FinOps (1)
 
-### Goldman Sachs Index Services API
-Access the full range of Goldman Sachs indices and basket products, or create bespoke solutions to tailor investment strategies. Design, create, and rebalance fully-customized, ready-to-trade basket solutions to express thematic and risk views.
+What the API costs to run, by operation.
 
-**Human URL:** [https://developer.gs.com/docs/#Products%20and%20Platforms](https://developer.gs.com/docs/#Products%20and%20Platforms)
+- [Goldman Sachs Finops](https://apis.io/finops/goldman-sachs/goldman-sachs-finops/)
 
-#### Tags
-- Indices
-- Baskets
-- Investment
+## Where to find this API
 
-#### Properties
-- [Documentation](https://developer.gs.com/docs/#Products%20and%20Platforms)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### Goldman Sachs Portfolio Services API
-Programmatically manage portfolio lifecycle from creation and update to scheduling reports with full control over visibility and sharing. Automate portfolio workflow using the APIs to focus on alpha-driving decisions.
-
-**Human URL:** [https://developer.gs.com/docs/#Products%20and%20Platforms](https://developer.gs.com/docs/#Products%20and%20Platforms)
-
-#### Tags
-- Portfolio
-- Reporting
-- Workflow
-
-#### Properties
-- [Documentation](https://developer.gs.com/docs/#Products%20and%20Platforms)
-
-### Goldman Sachs Data Services API
-Integrate Goldman Sachs data and insights into tools and processes. Access the same high-quality market, execution, and research data trusted by market professionals, as well as a variety of unique Goldman Sachs content for use in quantitative and data-driven strategies, including a Security Master with deep history.
-
-**Human URL:** [https://developer.gs.com/docs/#Products%20and%20Platforms](https://developer.gs.com/docs/#Products%20and%20Platforms)
-
-#### Tags
-- Data
-- Market Data
-- Research
-
-#### Properties
-- [Documentation](https://developer.gs.com/docs/#Products%20and%20Platforms)
-
-### Goldman Sachs Transaction Banking API
-Goldman Sachs Transaction Banking provides programmatic access to virtual and physical accounts, ACH, wire, and book transfers, and balance and transaction reporting for treasury and embedded banking workflows.
-
-**Human URL:** [https://developer.gs.com/docs/services/transaction-banking/](https://developer.gs.com/docs/services/transaction-banking/)
-
-#### Tags
-- Banking
-- Payments
-- Transaction Banking
-
-#### Properties
-- [Documentation](https://developer.gs.com/docs/services/transaction-banking/)
-
-## Common Properties
-
-- [Portal](https://developer.gs.com/)
+- [Website](https://www.goldmansachs.com/)
 - [Documentation](https://developer.gs.com/docs/)
-- [Website](https://marquee.gs.com/)
 - [Blog](https://developer.gs.com/blog/posts)
-- [GitHub Organization](https://github.com/goldmansachs/)
+- [Privacy policy](https://www.goldmansachs.com/privacy-and-cookies)
+- [GitHub](https://github.com/goldmansachs)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 34.1** — thin · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 39.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 31.6 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 22.4 |
+
+**Agent readiness 23.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.3** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/goldman-sachs/](https://apis.io/providers/goldman-sachs/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Goldman Sachs: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/goldman-sachs/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
