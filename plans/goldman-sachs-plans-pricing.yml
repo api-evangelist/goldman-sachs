@@ -1,0 +1,106 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Goldman Sachs
+providerId: goldman-sachs
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Banking
+  - Financial Services
+  - Capital Markets
+description: Goldman Sachs offers institutional and corporate APIs (e.g. Marquee data and analytics, Transaction
+  Banking, Goldman Sachs Asset Management feeds) but does not publish self-service pricing on a public
+  developer portal. API access is provisioned through commercial agreement with the relevant Goldman Sachs
+  business unit and is bundled with broader institutional services.
+notes: Reconcile after Goldman Sachs publishes a productized rate card.
+sources:
+  - https://www.goldmansachs.com/
+  - https://developer.gs.com/
+plans:
+  - id: goldman-sachs-marquee
+    name: Marquee (Institutional Access)
+    type: enterprise
+    description: Institutional access to Goldman Sachs Marquee market data, analytics, and risk APIs.
+      Custom commercial terms with the Marquee business unit.
+    entries:
+      - label: Institutional access
+        name: marquee_access
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact Marquee sales
+        userMultiplied: false
+    elements:
+      - name: Marquee data and analytics APIs
+      - name: Risk and pricing services
+      - name: Plot tool integration
+  - id: goldman-sachs-txb
+    name: Transaction Banking (TxB)
+    type: enterprise
+    description: Goldman Sachs Transaction Banking platform — corporate account, payments, and FX APIs.
+      Custom commercial terms with TxB.
+    entries:
+      - label: Corporate account
+        name: txb_account
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact TxB sales
+        userMultiplied: false
+      - label: Payment / FX execution
+        name: payment_execution
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: per master agreement
+        userMultiplied: false
+    elements:
+      - name: Multi-currency virtual accounts
+      - name: ACH / wire / SWIFT payments API
+      - name: FX execution API
+      - name: Liquidity reporting
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - subscription
+  units:
+  - negotiated
+  - transaction
+  plans:
+  - name: Marquee (Institutional Access)
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - year
+  - name: Transaction Banking (TxB)
+    access: enterprise
+    model: hybrid
+    model_how: derived
+    units:
+    - negotiated
+    - transaction
+    periods:
+    - per-use
+    - year
